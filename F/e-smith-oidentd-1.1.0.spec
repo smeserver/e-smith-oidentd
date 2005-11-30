@@ -2,7 +2,7 @@ Summary: e-smith server and gateway - ident daemon
 %define name e-smith-oidentd
 Name: %{name}
 %define version 1.1.0
-%define release 09
+%define release 10
 Version: %{version}
 Release: %{release}
 License: GPL
@@ -15,6 +15,7 @@ Patch2: e-smith-oidentd-1.1.0-05.mitel_patch
 Patch3: e-smith-oidentd-1.1.0-06.mitel_patch
 Patch4: e-smith-oidentd-1.1.0-08.mitel_patch
 Patch5: e-smith-oidentd-1.1.0-09.mitel_patch
+Patch6: e-smith-oidentd-1.1.0-GPL.patch
 Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
@@ -29,6 +30,9 @@ AutoReqProv: no
 e-smith server and gateway software - ident daemon
 
 %changelog
+* Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 1.1.0-10
+- Add COPYING file
+
 * Tue Mar 29 2005 Charlie Brady <charlieb@e-smith.com>
 - [1.1.0-09]
 - Use TCPPort fragment rather than explicit masq template fragment to
@@ -90,6 +94,7 @@ e-smith server and gateway software - ident daemon
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 perl createlinks
