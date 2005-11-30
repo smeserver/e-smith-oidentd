@@ -1,0 +1,13 @@
+Index: e-smith-oidentd/e-smith-oidentd.spec
+diff -u e-smith-oidentd/root/etc/e-smith/db/configuration/migrate/20Auth:1.1 e-smith-oidentd/root/etc/e-smith/db/configuration/migrate/20Auth:1.2
+--- e-smith-oidentd/root/etc/e-smith/db/configuration/migrate/20Auth:1.1	Mon Sep 22 00:38:58 2003
++++ e-smith-oidentd/root/etc/e-smith/db/configuration/migrate/20Auth	Mon Oct 27 17:03:52 2003
+@@ -3,7 +3,7 @@
+     my $oidentd = $DB->get('oidentd');
+     if ($auth)
+     {
+-	$oidentd ||= new_record('oidentd, {type => 'service'});
++	$oidentd ||= new_record('oidentd', {type => 'service'});
+ 	$oidentd->merge_props($auth->props);
+ 	$auth->delete;
+     }

@@ -1,0 +1,18 @@
+Index: e-smith-oidentd/e-smith-oidentd.spec
+diff -u /dev/null e-smith-oidentd/root/etc/e-smith/db/configuration/defaults/oidentd/TCPPort:1.1
+--- /dev/null	Tue Mar 29 14:03:07 2005
++++ e-smith-oidentd/root/etc/e-smith/db/configuration/defaults/oidentd/TCPPort	Tue Mar 29 14:02:15 2005
+@@ -0,0 +1 @@
++113
+Index: e-smith-oidentd/root/etc/e-smith/templates/etc/rc.d/init.d/masq/45AllowAUTH
+diff -u e-smith-oidentd/root/etc/e-smith/templates/etc/rc.d/init.d/masq/45AllowAUTH:1.1.1.1 e-smith-oidentd/root/etc/e-smith/templates/etc/rc.d/init.d/masq/45AllowAUTH:removed
+--- e-smith-oidentd/root/etc/e-smith/templates/etc/rc.d/init.d/masq/45AllowAUTH:1.1.1.1	Wed Aug 28 15:18:29 2002
++++ e-smith-oidentd/root/etc/e-smith/templates/etc/rc.d/init.d/masq/45AllowAUTH	Wed Dec 31 19:00:00 1969
+@@ -1,7 +0,0 @@
+-{
+-    my $status = $oidentd{status} || "disabled";
+-    my $access = $oidentd{access} || "public";
+-
+-    $OUT = allow_tcp_in(113,
+-	($status eq "enabled") && ($access eq "public"));
+-}
