@@ -1,21 +1,14 @@
 Summary: e-smith server and gateway - ident daemon
 %define name e-smith-oidentd
 Name: %{name}
-%define version 1.1.0
-%define release 10
+%define version 1.2.0
+%define release 01
 Version: %{version}
 Release: %{release}
 License: GPL
 Vendor: Mitel Networks Corporation
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-oidentd-1.1.0-02.mitel_patch
-Patch1: e-smith-oidentd-1.1.0-04.mitel_patch
-Patch2: e-smith-oidentd-1.1.0-05.mitel_patch
-Patch3: e-smith-oidentd-1.1.0-06.mitel_patch
-Patch4: e-smith-oidentd-1.1.0-08.mitel_patch
-Patch5: e-smith-oidentd-1.1.0-09.mitel_patch
-Patch6: e-smith-oidentd-1.1.0-GPL.patch
 Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
@@ -30,6 +23,9 @@ AutoReqProv: no
 e-smith server and gateway software - ident daemon
 
 %changelog
+* Wed Mar 15 2006 Charlie Brady <charlie_brady@mitel.com> 1.2.0-01
+- Roll stable stream version. [SME: 1016]
+
 * Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 1.1.0-10
 - Add COPYING file
 
@@ -88,13 +84,6 @@ e-smith server and gateway software - ident daemon
 
 %prep
 %setup
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
 
 %build
 perl createlinks
