@@ -1,6 +1,0 @@
-diff -Nur -x '*.orig' -x '*.rej' e-smith-oidentd-1.2.0/root/etc/e-smith/db/configuration/defaults/oidentd/status mezzanine_patched_e-smith-oidentd-1.2.0/root/etc/e-smith/db/configuration/defaults/oidentd/status
---- e-smith-oidentd-1.2.0/root/etc/e-smith/db/configuration/defaults/oidentd/status	2006-03-16 06:59:23.000000000 +1100
-+++ mezzanine_patched_e-smith-oidentd-1.2.0/root/etc/e-smith/db/configuration/defaults/oidentd/status	2006-04-07 08:07:45.611448617 +1000
-@@ -1 +1 @@
--enabled
-+disabled
