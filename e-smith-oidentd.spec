@@ -1,14 +1,15 @@
+# $Id: e-smith-oidentd.spec,v 1.2 2008/10/07 18:49:05 slords Exp $
+
 Summary: e-smith server and gateway - ident daemon
 %define name e-smith-oidentd
 Name: %{name}
-%define version 1.2.0
-%define release 3
+%define version 2.0.0
+%define release 1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-oidentd-1.2.0-changestatus.patch
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base >= 4.0.12-48
@@ -22,6 +23,9 @@ AutoReqProv: no
 e-smith server and gateway software - ident daemon
 
 %changelog
+* Tue Oct 7 2008 Shad L. Lords <slords@mail.com> 2.0.0-1.sme
+- Roll new stream to separate sme7/sme8 trees [SME: 4633]
+
 * Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
 - Clean up spec so package can be built by koji/plague
 
@@ -93,7 +97,6 @@ e-smith server and gateway software - ident daemon
 
 %prep
 %setup
-%patch0 -p1
 
 %build
 perl createlinks
